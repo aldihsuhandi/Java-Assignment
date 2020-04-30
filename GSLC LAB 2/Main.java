@@ -117,7 +117,7 @@ class Main
                     durr = fun.randNum(durr);
                     if(durr == 0)
                         durr = 60;
-                        System.out.printf("roaming for total range of %d in %d minutes\n", durr * animal.getSpeed(), durr);
+                    System.out.printf("roaming for total range of %d in %d minutes\n", durr * animal.getSpeed(), durr);
                 }
 
 
@@ -159,9 +159,15 @@ class Main
                 if(genus1.equals(genus2) && !gender1.equals(gender2))
                 {
                     if(genus1.equals("canine"))
+                    {
+                        totCanine -= 2;
                         System.out.println("ruff ruff <3");
+                    }
                     else
+                    {
+                        totFeline -= 2;
                         System.out.println("meow meow <3");
+                    }
 
                     zoo.remove(animal1);
                     zoo.remove(animal2);
@@ -169,9 +175,15 @@ class Main
                 else
                 {
                     if(genus1.equals("canine"))
+                    {
+                        --totCanine;
                         System.out.println("awooo!!");
+                    }
                     else
+                    {
+                        --totFeline;
                         System.out.println("hiss!!");
+                    }
 
                     zoo.remove(animal1);
                 }
