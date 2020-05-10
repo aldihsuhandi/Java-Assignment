@@ -1,3 +1,5 @@
+import java.util.Random;
+
 class Function
 {
     public void printMenu()
@@ -10,5 +12,12 @@ class Function
             System.out.printf("+ %d. %-19s+\n", i + 1, menu[i]);
         System.out.println("+=======================+");
         System.out.print("Choice >> ");
+    }
+
+    public int getRandNum(int n)
+    {
+        Random rand = new Random();
+        int ret = rand.nextInt(n + 1);
+        return ret;
     }
 }
