@@ -3,8 +3,10 @@ class Turtle extends Runner
     public Turtle(String name, String type, int speed)
     {
         super(name, type, speed);
+        addDistance();
     }
 
+    @Override
     public void addDistance()
     {
         Function fun = new Function();
@@ -15,6 +17,6 @@ class Turtle extends Runner
         else
             special = 0;
 
-        this.distances += moves + special;
+        this.distance += moves + special;
     }
 }
