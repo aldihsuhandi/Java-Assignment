@@ -21,7 +21,11 @@ class Main
         while(choice != 4){
             fun.clear_terminal();
             fun.printMenu();
-            choice = in.nextInt();
+            try{
+                choice = in.nextInt();
+            } catch(Exception e){
+
+            }
             in.nextLine();
 
             if(choice == 1)
