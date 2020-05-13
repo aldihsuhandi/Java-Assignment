@@ -13,6 +13,11 @@ class Main
         int win_turtle = 0, win_hare = 0;
 
         int choice = 0;
+       // runners.add(new Hare("Hare1", "hare", fun.getRandNum(50) + 25));
+       // runners.add(new Turtle("Turtle1", "turtle", fun.getRandNum(25) + 25));
+       // runners.add(new Turtle("Turtle2", "turtle", fun.getRandNum(25) + 25));
+       // runners.add(new Hare("Hare2", "hare", fun.getRandNum(50) + 25));
+
         while(choice != 4){
             fun.clear_terminal();
             fun.printMenu();
@@ -73,8 +78,8 @@ class Main
 
                         ++idx;
                     }
-                    System.out.println("+===========================================+")
-                    Collections.sort(runners, Collections.reverseOrder());;
+                    System.out.println("+===========================================+");
+                    Collections.sort(runners, Collections.reverseOrder());
 
                     System.out.print("Press enter to continue...");
                     in.nextLine();
@@ -95,6 +100,28 @@ class Main
 
                     ++idx;
                 }
+                System.out.println("+===========================================+");
+                System.out.printf("\n%s The %s takes the 1st place!!\n", runners.get(0).getName(), runners.get(0).getType());
+                System.out.print("Press enter to continue...");
+                in.nextLine();
+            }
+            else if(choice == 3)
+            {
+                fun.clear_terminal();
+                if(win_hare == win_turtle)
+                    System.out.println("DRAW");
+                else if(win_hare > win_turtle)
+                    System.out.println("HARE LEADS");
+                else
+                    System.out.println("TURTLE LEADS");
+
+                System.out.println("+===========================================+");
+                System.out.println("+        Hare         |      Turtle         +");
+                System.out.println("+===========================================+");
+                System.out.printf("+ %-3d                 | %-3d                 +\n", win_hare, win_turtle);
+                System.out.println("+===========================================+");
+                System.out.print("Press enter to continue...");
+                in.nextLine();
             }
         }
     }
