@@ -50,11 +50,20 @@ class Main
                     runners.add(new Turtle(name, type, speed));
                 }
 
-                System.out.print("Another runner has joined the race!!");
+                System.out.println("Another runner has joined the race!!");
+                System.out.print("Press enter to continue...");
                 in.nextLine();
             }
             else if(choice == 2)
             {
+                if(runners.isEmpty())
+                {
+                    System.out.println("There is no runner...");
+                    System.out.print("Press enter to continue...");
+                    in.nextLine();
+
+                    continue;
+                }
                 int[] distance = {150, 250, 500};
                 int index = fun.getRandNum(3) - 1;
                 for(int i = 0;i < 3;++i)
