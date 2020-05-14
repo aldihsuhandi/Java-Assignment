@@ -23,9 +23,8 @@ class Main
             fun.printMenu();
             try{
                 choice = in.nextInt();
-            } catch(Exception e){
+            } catch(Exception e){}
 
-            }
             in.nextLine();
 
             if(choice == 1)
